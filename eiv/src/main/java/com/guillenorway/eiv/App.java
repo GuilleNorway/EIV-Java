@@ -1,13 +1,17 @@
 package com.guillenorway.eiv;
 
-/**
- * Hello world!
- *
- */
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Import;
+
+import com.sdl.odata.service.ODataServiceConfiguration;
+
+@SpringBootApplication
+@Import({ ODataServiceConfiguration.class})
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        SpringApplication.run(App.class, args);
     }
 }
